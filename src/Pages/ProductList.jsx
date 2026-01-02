@@ -28,7 +28,7 @@ const ProductList = () => {
 
   return (
     <div className='flex flex-col'>
-      <div className='flex items-center ml-14 mb-4 gap-2 text-[13px] font-medium text-gray-400'>
+      <div className='flex items-center ml-4 mb-2 sm:ml-14 sm:mb-4 gap-2 text-[13px] font-medium text-gray-400'>
         <Link className='cursor-pointer' to={'/'}>Home</Link>
         <img className='rotate-270 w-2' src={assets.arrowIcon} alt="" />
         <Link className='cursor-pointer' to={`/category/${categoryId || 'products'}`}>{categoryName}</Link>

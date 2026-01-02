@@ -17,11 +17,11 @@ const RelatedProducts = ({category}) => {
     }, [products])
 
   return (
-    <div className='flex flex-col m-6 bg-white p-6'>
+    <div className='flex flex-col m-6 bg-white p-6 w-full'>
       <div>
-        <h2 className='text-[18px] font-medium'>RELATED PRODUCTS</h2>
+        <h2 className='text-[12px] sm:text-[18px] font-medium'>RELATED PRODUCTS</h2>
       </div>
-      <div className='flex items-center mt-5'>
+      <div className='grid gap-10 grid-cols-2 sm:flex items-center sm:justify-between w-80 mt-3 sm:mt-5'>
         {
             related.map((item, index) =>(
                 <ProductIntro

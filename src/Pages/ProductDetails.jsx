@@ -50,19 +50,19 @@ const ProductDetails = () => {
 
     return (
         <div className='w-full'>
-            <div className='flex items-center ml-14 mb-4 gap-2 text-[13px] font-medium text-gray-400'>
+            <div className='flex items-center ml-5 mb-0 sm:ml-14 sm:mb-4 gap-2 text-[12px] sm:text-[13px] font-medium text-gray-400'>
                 <Link className='cursor-pointer' to={'/'}>Home</Link>
                 <img className='rotate-270 w-2' src={assets.arrowIcon} alt="" />
                 <Link className='cursor-pointer' to={`/category/${productData?.category || 'products'}`}>{categoryName}</Link>
             </div>
 
             {productData ? (
-                <div className='flex items-start gap-16 p-6 w-full'>
-                    <div className='flex items-start justify-center gap-20 p-6 w-full bg-white border border-gray-300'>
+                <div className='flex flex-col sm:flex sm:flex-row items-start gap-4 p-3 sm:gap-16 sm:p-6 w-full'>
+                    <div className='flex flex-col items-center sm:flex sm:flex-row sm:items-start justify-center gap-8 sm:gap-20 p-3 sm:p-6 w-full bg-white border border-gray-300'>
                         {/* product image  */}
-                        <div className='ml-7 flex flex-col gap-3'>
+                        <div className='ml-3 sm:ml-7 flex flex-col gap-3'>
                             <div className='w-full border border-gray-300'>
-                                <img className='w-100 h-90 object-center object-cover p-4' src={image} alt="" />
+                                <img className='w-100 h-90 object-center object-cover p-2 sm:p-4' src={image} alt="" />
                             </div>
                             <div>
                                 {productData.image && productData.image.length > 0 && (
@@ -132,7 +132,7 @@ const ProductDetails = () => {
                         </div>
 
                         {/* seller profile  */}
-                        <div className='flex flex-col gap-2 border p-3 w-60'>
+                        <div className='flex flex-col gap-2 border p-3 w-80 sm:w-60'>
                             <p className='text-xl leading-5 font-medium'>Supplier <br /> Guanjoi Trading LLC</p>
                             <div className='flex flex-col gap-3'>
                                 <div className='flex items-center gap-3'>
@@ -154,16 +154,16 @@ const ProductDetails = () => {
                             </div>
                             <div>
                                 <div className=''>
-                                    <div className='flex items-center gap-4 mt-4 ml-4'>
+                                    <div className='flex items-center gap-4 mt-4 ml-14 sm:ml-4'>
                                         {
                                             productData.sizes.map((item, index) => (
                                                 <button onClick={() => setSize(item)}
-                                                key={index} 
-                                                className={`border px-2 py-0.5 cursor-pointer ${item === size ? 'border-blue-500' : ''}`}>{item}</button>
+                                                    key={index}
+                                                    className={`border px-2 py-0.5 cursor-pointer ${item === size ? 'border-blue-500' : ''}`}>{item}</button>
                                             ))
                                         }
                                     </div>
-                                    <button onClick={()=> addToCart(productData.id, size)} className='ml-10 mt-4 bg-black text-white px-4 py-1 text-[15px] cursor-pointer hover:bg-gray-800 transition-all'>ADD TO CART</button>
+                                    <button onClick={() => addToCart(productData.id, size)} className='ml-20 sm:ml-10 mt-4 bg-black text-white px-4 py-1 text-[15px] cursor-pointer hover:bg-gray-800 transition-all'>ADD TO CART</button>
                                 </div>
                             </div>
                         </div>
@@ -176,28 +176,28 @@ const ProductDetails = () => {
             {/* description and review */}
             <div className='flex flex-col gap-1 p-4 ml-6 mr-6 border border-gray-300 bg-white'>
                 <div className='flex gap-6 border-b-2 border-gray-300'>
-                    <p className='text-[16px] text-blue-500 font-medium border-b-2 cursor-pointer'>Description</p>
-                    <p className='text-[16px] text-gray-400 font-medium cursor-pointer'>Reviews</p>
-                    <p className='text-[16px] text-gray-400 font-medium cursor-pointer'>Shipping</p>
-                    <p className='text-[16px] text-gray-400 font-medium cursor-pointer'>About seller</p>
+                    <p className='text-[12px] sm:text-[16px] text-blue-500 font-medium border-b-2 cursor-pointer'>Description</p>
+                    <p className='text-[12px] sm:text-[16px] text-gray-400 font-medium cursor-pointer'>Reviews</p>
+                    <p className='text-[12px] sm:text-[16px] text-gray-400 font-medium cursor-pointer'>Shipping</p>
+                    <p className='text-[12px] sm:text-[16px] text-gray-400 font-medium cursor-pointer'>About seller</p>
                 </div>
                 <div>
-                    <p className='text-[15px] text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, optio alias? Rem numquam eaque aspernatur, nesciunt sit ratione expedita sint nemo.</p>
-                    <p className='text-[15px] text-gray-500'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptates voluptatem nihil distinctio magnam. Dolores dolorum vero tenetur consequuntur eligendi quisquam fugit ratione itaque obcaecati rem accusamus alias sunt consectetur voluptas minima quod voluptatibus reprehenderit sapiente ducimus atque ullam, recusandae earum quae! Obcaecati minus est, adipisci eum in vero aliquam repellat vitae esse excepturi hic?</p>
+                    <p className='text-[12px] sm:text-[15px] text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, optio alias? Rem numquam eaque aspernatur, nesciunt sit ratione expedita sint nemo.</p>
+                    <p className='text-[12px] sm:text-[15px] text-gray-500'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos voluptates voluptatem nihil distinctio magnam. Dolores dolorum vero tenetur consequuntur eligendi quisquam fugit ratione itaque obcaecati rem accusamus alias sunt consectetur voluptas minima quod voluptatibus reprehenderit sapiente ducimus atque ullam, recusandae earum quae! Obcaecati minus est, adipisci eum in vero aliquam repellat vitae esse excepturi hic?</p>
                 </div>
-                <div className='flex items-center gap-12 border border-gray-300 w-60'>
+                <div className='flex items-center gap-6 sm:gap-12 border border-gray-300 w-60'>
                     <p className='bg-gray-300 w-30 p-1'>Model</p>
                     <p className='text-[12px] font-medium'>#878613</p>
                 </div>
-                <div className='flex items-center gap-12 border border-gray-300 w-60'>
+                <div className='flex items-center gap-6 sm:gap-12 border border-gray-300 w-60'>
                     <p className='bg-gray-300 w-30 p-1'>Style</p>
                     <p className='text-[12px] font-medium'>Classic Style</p>
                 </div>
-                <div className='flex items-center gap-12 border border-gray-300 w-60'>
+                <div className='flex items-center gap-6 sm:gap-12 border border-gray-300 w-60'>
                     <p className='bg-gray-300 w-30 p-1'>Certificate</p>
                     <p className='text-[12px] font-medium'>IS0-65456</p>
                 </div>
-                <div className='flex items-center gap-12 border border-gray-300 w-60'>
+                <div className='flex items-center gap-6 sm:gap-12 border border-gray-300 w-60'>
                     <p className='bg-gray-300 w-30 p-1'>Size</p>
                     <p className='text-[12px] font-medium'>30mm*40mm</p>
                 </div>
@@ -208,21 +208,23 @@ const ProductDetails = () => {
             </div>
 
             {/* Display Product  */}
-            {productData && productData.category && (
-                <RelatedProducts
-                    category={productData.category}
-                />
-            )}
+            <div className='sm:flex w-full'>
+                {productData && productData.category && (
+                    <RelatedProducts
+                        category={productData.category}
+                    />
+                )}
+            </div>
 
             {/* slider  */}
 
-            <div className='flex items-center w-full justify-center mb-6'>
-                <div className='flex items-center justify-between bg-blue-500 w-[100%] m-6 p-4'>
+            <div className='flex items-center w-full justify-center mb-2 sm:mb-6'>
+                <div className='flex items-center justify-between bg-blue-500 w-[100%] m-3 p-2 sm:m-6 sm:p-4'>
                     <div>
-                        <h2 className='text-2xl text-white font-semibold'>Super discount on more than 100 USD</h2>
-                        <p className='text-[14px] text-gray-300'>Have you ever finally just write dummy info</p>
+                        <h2 className='text-[16px] sm:text-2xl text-white font-semibold'>Super discount on more than 100 USD</h2>
+                        <p className='text-[10px] sm:text-[14px] text-gray-300'>Have you ever finally just write dummy info</p>
                     </div>
-                    <button className='bg-yellow-500 p-1.5 rounded text-[15px] font-medium cursor-pointer'>Shop Now</button>
+                    <button className='bg-yellow-500 p-1 sm:p-1.5 rounded text-[12px] sm:text-[15px] font-medium cursor-pointer'>Shop Now</button>
                 </div>
             </div>
         </div>
