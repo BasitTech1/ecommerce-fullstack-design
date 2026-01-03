@@ -41,6 +41,9 @@ import World from './world_icon.png'
 import secure from './secure_icon.png'
 import Shipping from './shippin_icon.png'
 import Support from './support_icon.png'
+import Home_icon from './Home_icon.png'
+import Order_icon from './Order_icon.png'
+import About_icon from './About_icon.png'
 
 
 // --------------------------product----------------
@@ -120,6 +123,9 @@ export const assets = {
     secure,
     Support,
     Shipping,
+    Home_icon,
+    Order_icon,
+    About_icon,
 
     // banner 
     Banner1,

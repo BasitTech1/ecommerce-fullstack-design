@@ -1,17 +1,72 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { assets } from '../assets/assets'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
+import { RiCloseCircleLine, RiHeadphoneLine, RiHeartLine, RiShieldCrossFill } from '@remixicon/react'
 
 const Navbar = () => {
 
-    const {getCartCount} = useContext(ShopContext)
+    const { getCartCount } = useContext(ShopContext)
+    const [openMenu, setOpenMenu] = useState(false)
+
+    const menuToggle =()=>{
+        setOpenMenu(!openMenu)
+    }
 
 
     return (
         <div className='flex flex-col py-3 sm:py-6 w-full gap-4'>
             <div className='flex items-center justify-between'>
-                <Link to={'/'}><img className='ml-4 w-25 sm:ml-14 sm:w-40' src={assets.Logo} alt="" /></Link>
+
+                {/* mobile menu  */}
+                <div className='flex items-center gap-4 sm:gap-0 ml-5 sm:ml-0 z-10 relative'>
+                    <img onClick={setOpenMenu} className='transition-all flex sm:hidden cursor-pointer' src={assets.MenuIcon} alt="" />
+                    <Link to={'/'}><img className='ml-0 w-25 md:w-30 sm:ml-14 sm:w-40' src={assets.Logo} alt="" /></Link>
+
+                    <div className={`${openMenu ? 'flex' : 'hidden'} transition-all flex-col absolute sm:hidden left-0 top-0 bg-white p-4 shadow-2xl w-50 h-[100vh] fixed`}>
+                        <RiCloseCircleLine onClick={menuToggle} className='ml-35 w-8 text-gray-500' />
+                        <div className='flex items-center gap-4 mb-4 border-b-2 border-gray-300 pb-2'>
+                            <img className='bg-gray-200 p-2 rounded-full' src={assets.ProfileIcon} alt="" />
+                            <p className='text-[14px] text-gray-400 leading-4'>Sign In | Register</p>
+                        </div>
+                        <ul>
+                            <div className='flex flex-col items-start gap-2 border-b-2 border-gray-300 pb-2'>
+                                <li className='flex items-center gap-4'>
+                                    <img className='w-5.5' src={assets.Home_icon} alt="" />
+                                    <p className='text-gray-500 text-[18px]'>Home</p>
+                                </li>
+                                <li className='flex items-center gap-4'>
+                                    <RiHeartLine className='w-5 text-gray-500' />
+                                    <p className='text-gray-500 text-[18px]'>Favorities</p>
+                                </li>
+                                <li className='flex items-center gap-4'>
+                                    <img className='w-[17px] ml-0.5' src={assets.Order_icon} alt="" />
+                                    <p className='text-gray-500 text-[18px]'>My Orders</p>
+                                </li>
+                            </div>
+                            <div className='flex flex-col mt-5 gap-2 border-b-2 border-gray-300 pb-2'>
+                                <li className='flex items-center gap-4'>
+                                    <img className='w-[20px]' src={assets.World} alt="" />
+                                    <p className='text-gray-500 text-[18px]'>English | USD</p>
+                                </li>
+                                <li className='flex items-center gap-4'>
+                                    <RiHeadphoneLine className='w-[20px] text-gray-500' />
+                                    <p className='text-gray-500 text-[18px]'>Contact Us</p>
+                                </li>
+                                <li className='flex items-center gap-4'>
+                                    <img className='w-[19px]' src={assets.About_icon} alt="" />
+                                    <p className='text-gray-500 text-[18px]'>About</p>
+                                </li>
+                            </div>
+                            <div className='flex flex-col mt-2 gap-2 ml-4'>
+                                <li className='text-[15px] font-semibold text-gray-400'>User Agreement</li>
+                                <li className='text-[15px] font-semibold text-gray-400'>Partnership</li>
+                                <li className='text-[15px] font-semibold text-gray-400'>Privacy Policy</li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
                 <div className='hidden sm:flex'>
                     <div className='flex w-130 items-center border-2 px-1 border-[rgba(18,127,255,1)]'>
                         <input className='w-100' type="search" placeholder='Search' />
