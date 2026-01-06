@@ -59,10 +59,10 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='flex items-start justify-between px-5 sm:px-10 bg-gray-50 py-2 sm:py-5'>
-                <p className='text-[15px] text-gray-600 font-medium'>@2024 Ecommerce.</p>
-                <div className='text-[15px] text-gray-600 font-medium flex items-center justify-center gap-0.5'>
-                    <img className='w-5' src={assets.UsFlag} alt="" />
+            <div className='flex items-start justify-between px-4 sm:px-10 bg-gray-50 py-1 sm:py-5'>
+                <p className='text-[12px] lg:text-[15px] text-gray-600 font-medium'>@2024 Ecommerce.</p>
+                <div className='text-[12px] lg:text-[15px] text-gray-600 font-medium flex items-center justify-center gap-0.5'>
+                    <img className='w-3 lg:w-5' src={assets.UsFlag} alt="" />
                     <p>English</p>
                 </div>
             </div>
