@@ -61,25 +61,25 @@ const AnalogClock = () => {
 
   return (
     <div className="w-full">
-      <div className="flex items-center gap-2 sm:gap-5">
+      <div className="flex items-center gap-2 md:hidden lg:flex lg:gap-5">
         <div className="flex flex-col items-center bg-gray-800 px-1 py-0.5 sm:px-2 sm:py-1 text-white">
-          <div className="text-[10px] sm:text-[14px]">{formatNumber(timeLeft.days)}</div>
-          <div className="text-[11px] sm:text-[15px]">Days</div>
+          <div className="text-[10px] md:text-[12px] lg:text-[14px]">{formatNumber(timeLeft.days)}</div>
+          <div className="text-[11px] md:text-[13px] lg:text-[15px]">Days</div>
         </div>
 
         <div className="flex flex-col items-center bg-gray-800 px-1 py-0.5 sm:px-2 sm:py-1 text-white">
-          <div className="text-[10px] sm:text-[14px]">{formatNumber(timeLeft.hours)}</div>
-          <div className="text-[11px] sm:text-[15px]">Hour</div>
+          <div className="text-[10px] md:text-[12px] lg:text-[14px]">{formatNumber(timeLeft.hours)}</div>
+          <div className="text-[11px] md:text-[13px] lg:text-[15px]">Hour</div>
         </div>
 
         <div className="flex flex-col items-center bg-gray-800 px-1 py-0.5 sm:px-2 sm:py-1 text-white">
-          <div className="text-[10px] sm:text-[14px]">{formatNumber(timeLeft.minutes)}</div>
-          <div className="text-[11px] sm:text-[15px]">Min</div>
+          <div className="text-[10px] md:text-[12px] lg:text-[14px]">{formatNumber(timeLeft.minutes)}</div>
+          <div className="text-[11px] md:text-[13px] lg:text-[15px]">Min</div>
         </div>
 
         <div className="flex flex-col items-center bg-gray-800 px-1 py-0.5 sm:px-2 sm:py-1 text-white">
-          <div className="text-[10px] sm:text-[14px]">{formatNumber(timeLeft.seconds)}</div>
-          <div className="text-[11px] sm:text-[15px]">Sec</div>
+          <div className="text-[10px] md:text-[12px] lg:text-[14px]">{formatNumber(timeLeft.seconds)}</div>
+          <div className="text-[11px] md:text-[13px] lg:text-[15px]">Sec</div>
         </div>
       </div>
     </div>

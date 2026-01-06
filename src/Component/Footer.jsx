@@ -6,19 +6,19 @@ const Footer = () => {
         <div className='flex flex-col bg-white py-2'>
             <div className='grid grid-cols-2 sm:flex sm:flex-row items-center justify-between gap-14 sm:gap-0 bg-white p-6 sm:p-10'>
                 <div className='flex flex-col gap-4'>
-                    <img className='w-30 sm:w-40' src={assets.Logo} alt="" />
-                    <p className='text-[12px] sm:text-[14px] leading-3 sm:leading-4 text-gray-400'>Best information about the company <br /> gives here but now qualtiy product</p>
+                    <img className='w-30 lg:w-40' src={assets.Logo} alt="" />
+                    <p className='text-[12px] lg:text-[14px] leading-3 sm:leading-4 text-gray-400'>Best information about the company <br /> gives here but now qualtiy product</p>
                     <div className='flex items-start gap-2.5'>
-                        <img className='w-5 sm:w-10 cursor-pointer' src={assets.FbICon} alt="" />
-                        <img className='w-5 sm:w-10 cursor-pointer' src={assets.TwitterIcon} alt="" />
-                        <img className='w-5 sm:w-10 cursor-pointer' src={assets.LinkedinIcon} alt="" />
-                        <img className='w-5 sm:w-10 cursor-pointer' src={assets.InstaIcon} alt="" />
-                        <img className='w-5 sm:w-10 cursor-pointer' src={assets.YoutubeIcon} alt="" />
+                        <img className='w-5 lg:w-10 cursor-pointer' src={assets.FbICon} alt="" />
+                        <img className='w-5 lg:w-10 cursor-pointer' src={assets.TwitterIcon} alt="" />
+                        <img className='w-5 lg:w-10 cursor-pointer' src={assets.LinkedinIcon} alt="" />
+                        <img className='w-5 lg:w-10 cursor-pointer' src={assets.InstaIcon} alt="" />
+                        <img className='w-5 lg:w-10 cursor-pointer' src={assets.YoutubeIcon} alt="" />
                     </div>
                 </div>
                 <div>
-                    <p className='text-[20px] font-medium text-gray-900'>About</p>
-                    <ul className='text-[16px] text-gray-400'>
+                    <p className='text-[16px] lg:text-[20px] font-medium text-gray-900'>About</p>
+                    <ul className='text-[13px] lg:text-[16px] text-gray-400'>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>About Us</li>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Find store</li>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Categories</li>
@@ -26,8 +26,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <p className='text-[20px] font-medium text-gray-900'>Partnership</p>
-                    <ul className='text-[16px] text-gray-400'>
+                    <p className='text-[16px] lg:text-[20px] font-medium text-gray-900'>Partnership</p>
+                    <ul className='text-[13px] lg:text-[16px] text-gray-400'>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>About Us</li>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Find store</li>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Categories</li>
@@ -35,8 +35,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <p className='text-[20px] font-medium text-gray-900'>Information</p>
-                    <ul className='text-[16px] text-gray-400'>
+                    <p className='text-[16px] lg:text-[20px] font-medium text-gray-900'>Information</p>
+                    <ul className='text-[13px] lg:text-[16px] text-gray-400'>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Help Center</li>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Money Refund</li>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Shipping</li>
@@ -44,8 +44,8 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div>
-                    <p className='text-[20px] font-medium text-gray-900'>For Users</p>
-                    <ul className='text-[16px] text-gray-400'>
+                    <p className='text-[16px] lg:text-[20px] font-medium text-gray-900'>For Users</p>
+                    <ul className='text-[13px] lg:text-[16px] text-gray-400'>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Login</li>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Register</li>
                         <li className='cursor-pointer hover:text-gray-500 transition-all'>Settings</li>
@@ -53,9 +53,9 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className='flex flex-col gap-1'>
-                    <p className='text-[20px] font-medium text-gray-900'>Get App</p>
-                    <img className='cursor-pointer w-30' src={assets.googlePlayIcon} alt="" />
-                    <img className='cursor-pointer w-30' src={assets.AppStoreIcon} alt="" />
+                    <p className='text-[16px] lg:text-[20px] font-medium text-gray-900'>Get App</p>
+                    <img className='cursor-pointer w-25 lg:w-30' src={assets.googlePlayIcon} alt="" />
+                    <img className='cursor-pointer w-25 lg:w-30' src={assets.AppStoreIcon} alt="" />
                 </div>
             </div>
 

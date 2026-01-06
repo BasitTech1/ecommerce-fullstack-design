@@ -21,14 +21,14 @@ const Section2 = () => {
   }, [])
 
   return (
-    <div className='mt-4 px-6 sm:mt-10 sm:px-18 w-full flex flex-col gap-4'>
-      <div className='bg-white flex flex-col sm:flex sm:flex-row items-start gap-2 rounded border border-gray-300'>
+    <div className='mt-3 px-6 md:mt-5 md:px-10 lg:mt-10 lg:px-18 w-full flex flex-col gap-4'>
+      <div className='bg-white flex flex-col lg:flex lg:flex-row items-start gap-2 rounded border border-gray-300'>
         <div>
-          <div className='relative'>
-            <img className='w-100 sm:w-75 rounded-tl rounded-bl' src={assets.SideBanner1} alt="" />
+          <div className='relative w-full'>
+            <img className='w-100 md:w-3xl md:h-60 lg:h-auto object-cover lg:w-75 rounded-tl rounded-bl' src={assets.SideBanner1} alt="" />
             <div className='absolute top-8 left-4'>
-              <p className='text-4xl mt-10 sm:mt-0 leading-9 sm:text-[20px] sm:leading-5 font-medium'>Home and <br /> Outdoor</p>
-              <button className='mt-6 sm:mt-4 bg-white p-3 sm:p-2 font-medium rounded sm:cursor-pointer text-xl sm:text-sm hover:text-gray-400'>Source Now</button>
+              <p className='text-4xl md:font-semibold mt-10 sm:mt-0 leading-9 lg:text-[20px] lg:leading-5 lg:font-medium'>Home and <br /> Outdoor</p>
+              <button className='mt-6 lg:mt-4 bg-white p-3 lg:p-2 font-medium rounded sm:cursor-pointer text-xl lg:text-sm hover:text-gray-400'>Source Now</button>
             </div>
           </div>
         </div>
@@ -47,13 +47,13 @@ const Section2 = () => {
           }
         </div>
       </div>
-      <div className='bg-white flex flex-col sm:flex sm:flex-row items-start gap-2 rounded border border-gray-300'>
+      <div className='bg-white flex flex-col lg:flex lg:flex-row items-start gap-2 rounded border border-gray-300'>
         <div>
-          <div className='relative'>
-            <img className='w-100 sm:w-75 rounded-tl rounded-bl' src={assets.SideBanner2} alt="" />
+          <div className='relative w-full'>
+            <img className='w-100 md:w-3xl md:h-60 lg:h-auto object-cover lg:w-75 rounded-tl rounded-bl' src={assets.SideBanner2} alt="" />
             <div className='absolute top-8 left-4'>
-              <p className='text-[30px] leading-8 sm:text-[20px] sm:leading-5 font-medium'>Consumer <br /> electronics and <br />gadets</p>
-              <button className='mt-6 sm:mt-4 bg-white p-3 sm:p-2 font-medium rounded sm:cursor-pointer text-xl sm:text-sm hover:text-gray-400'>Source Now</button>
+              <p className='text-4xl md:font-semibold mt-10 sm:mt-0 leading-9 lg:text-[20px] lg:leading-5 lg:font-medium'>Consumer <br /> electronics and <br />gadets</p>
+              <button className='mt-6 lg:mt-4 bg-white p-3 lg:p-2 font-medium rounded sm:cursor-pointer text-xl lg:text-sm hover:text-gray-400'>Source Now</button>
             </div>
           </div>
         </div>

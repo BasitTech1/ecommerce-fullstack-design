@@ -17,12 +17,12 @@ const Section1 = () => {
     }, [])
 
     return (
-        <div className='mt-[-120px] px-6 sm:mt-10 w-full sm:px-18'>
-            <div className='sm:flex items-center justify-start gap-45 bg-white rounded border border-gray-300 h-60 w-[100%]'>
-                <div className='flex gap-2 sm:gap-0 sm:flex sm:flex-col items-start ml-2 w-20 sm:ml-6 sm:w-30 mt-3 sm:mt-0'>
-                    <div className='flex flex-col'>
-                        <h4 className='font-semibold text-xl sm:text-[18px] w-50 sm:w-30'>Deals and offers</h4>
-                        <p className='text-sm mt-[-4px] mb-5 text-gray-500'>Hygiene equipments</p>
+        <div className='mt-2 px-5 md:mt-4 lg:mt-10 w-full md:px-10 lg:px-18'>
+            <div className='sm:flex items-center justify-start gap-45 bg-white rounded border border-gray-300 h-60 lg:h-60 md:h-40 w-[100%]'>
+                <div className='flex gap-0 sm:flex sm:flex-col items-start ml-2 w-20 md:ml-3 lg:ml-6 md:w-5 lg:w-30 mt-3 sm:mt-0'>
+                    <div className='flex flex-col md:w-full'>
+                        <h4 className='font-semibold text-[15px] md:text-[22px] lg:text-[18px] w-40 sm:w-30'>Deals and offers</h4>
+                        <p className='text-[12px] md:text-[16px] lg:text-sm mt-[-4px] mb-5 text-gray-500'>Hygiene equipments</p>
                     </div>
                     <AnalogClock />
                 </div>
@@ -54,7 +54,7 @@ const Section1 = () => {
                     </Swiper>
                 </div>
 
-                <div className='hidden sm:flex items-center justify-center gap-18 cursor-pointer w-full h-full'>
+                <div className='hidden sm:flex sm:items-center md:justify-end lg:justify-center gap-0 ml-0 lg:ml-0 md:ml-[-20px] md:gap-12 lg:gap-18 cursor-pointer w-full h-full'>
                     {
                         dealsProducts.map((item, index) => (
                             <ProductIntro key={index} id={item.id} image={item.image} name={item.name} price={item.price} />

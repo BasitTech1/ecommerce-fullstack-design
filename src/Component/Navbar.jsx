@@ -15,15 +15,15 @@ const Navbar = () => {
 
 
     return (
-        <div className='flex flex-col py-3 sm:py-6 w-full gap-4'>
+        <div className='flex flex-col py-3 md:p-4 lg:py-6 w-full gap-4'>
             <div className='flex items-center justify-between'>
 
                 {/* mobile menu  */}
-                <div className='flex items-center gap-4 sm:gap-0 ml-5 sm:ml-0 z-10 relative'>
-                    <img onClick={setOpenMenu} className='transition-all flex sm:hidden cursor-pointer' src={assets.MenuIcon} alt="" />
-                    <Link to={'/'}><img className='ml-0 w-25 md:w-30 sm:ml-14 sm:w-40' src={assets.Logo} alt="" /></Link>
+                <div className='flex items-center gap-4 lg:gap-0 ml-5 sm:ml-0 z-10 relative'>
+                    <img onClick={setOpenMenu} className='transition-all flex lg:hidden md:hidden cursor-pointer' src={assets.MenuIcon} alt="" />
+                    <Link to={'/'}><img className='ml-0 w-25 md:w-30 lg:ml-14 md:ml-4 lg:w-40' src={assets.Logo} alt="" /></Link>
 
-                    <div className={`${openMenu ? 'flex' : 'hidden'} transition-all flex-col absolute sm:hidden left-0 top-0 bg-white p-4 shadow-2xl w-50 h-[100vh] fixed`}>
+                    <div className={`${openMenu ? 'flex' : 'hidden'} md:hidden transition-all flex-col absolute sm:hidden left-0 top-0 bg-white p-4 shadow-2xl w-50 h-[100vh] fixed`}>
                         <RiCloseCircleLine onClick={menuToggle} className='ml-35 w-8 text-gray-500' />
                         <div className='flex items-center gap-4 mb-4 border-b-2 border-gray-300 pb-2'>
                             <img className='bg-gray-200 p-2 rounded-full' src={assets.ProfileIcon} alt="" />
@@ -67,19 +67,19 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className='hidden sm:flex'>
-                    <div className='flex w-130 items-center border-2 px-1 border-[rgba(18,127,255,1)]'>
-                        <input className='w-100' type="search" placeholder='Search' />
-                        <div className='flex items-center justify-center w-50 gap-3 border-l-2 border-[rgba(18,127,255,1)]'>
-                            <p className='flex items-center gap-2 cursor-pointer'>All categories
+                <div className='hidden lg:flex md:flex '>
+                    <div className='flex md:w-70 lg:w-130 items-center border-2 lg:px-1 md:p-0 border-[rgba(18,127,255,1)]'>
+                        <input className='md:w-40 md:p-1 lg:p-0 lg:w-100' type="search" placeholder='Search' />
+                        <div className='flex items-center justify-center sm:w-50 gap-3 border-l-2 border-[rgba(18,127,255,1)]'>
+                            <p className='flex items-center md:gap-1 md:text-[14px] lg:text-[16px] lg:gap-2 cursor-pointer'>All categories
                                 <img src={assets.arrowIcon} alt="" />
                             </p>
                         </div>
                     </div>
-                    <button className='bg-[rgba(18,127,255,1)] text-white py-1 mr-[-76px] px-3 cursor-pointer hover:bg-[#0666d4]'>Search</button>
+                    <button className='bg-[rgba(18,127,255,1)] text-white lg:py-1 lg:mr-[-76px] lg:px-3 md:px-1 cursor-pointer hover:bg-[#0666d4] md:text-[12px] lg:text-[16px]'>Search</button>
                 </div>
-                <div className='w-30 gap-2 mr-0 sm:w-75 flex items-center sm:gap-4 sm:mr-8'>
-                    <button className='flex flex-col w-8 sm:w-12 items-center justify-center gap-1 sm:gap-1.5 cursor-pointer'>
+                <div className='gap-2 mr-0 md:w-44 lg:w-75 flex items-center md:gap-3 lg:gap-4 md:mr-4 lg:mr-8'>
+                    <button className='flex flex-col md:w-6 lg:w-8 sm:w-12 items-center justify-center gap-1 lg:gap-1.5 cursor-pointer'>
                         <img className='w-6' src={assets.ProfileIcon} alt="" />
                         <p className='text-[10px] font-medium text-gray-500'>Profile</p>
                     </button>
@@ -91,7 +91,7 @@ const Navbar = () => {
                         <img className='w-6' src={assets.HeartIcon} alt="" />
                         <p className='text-[10px] font-medium text-gray-500'>Orders</p>
                     </button>
-                    <Link to={'/cart'} className='flex flex-col w-12 items-center justify-center sm:gap-1 mt-1 cursor-pointer relative'>
+                    <Link to={'/cart'} className='flex flex-col w-12 items-center justify-center mr-4 sm:mr-0 sm:gap-1 mt-1 cursor-pointer relative'>
                         <img className='w-6' src={assets.CartIcon} alt="" />
                         <p className='text-[10px] font-medium text-gray-500'>My Cart</p>
                         <p className='text-[8px] absolute right-[-5px] bottom-[26px] bg-blue-600 text-center leading-4 rounded-full w-4 font-medium text-white'>{getCartCount()}</p>
@@ -99,30 +99,30 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className='hidden sm:flex items-center justify-between py-2 border-t-1 border-b-1 border-gray-300 font-medium text-gray-600'>
-                <ul className='flex items-center justify-center gap-10 ml-14'>
-                    <li className='flex items-center gap-2 cursor-pointer hover:text-gray-700'>
+            <div className='hidden md:flex lg:flex items-center justify-between md:py-1 lg:py-2 border-t-1 border-b-1 border-gray-300 font-medium text-gray-600 md:h-full lg:w-full'>
+                <ul className='flex items-center justify-center md:gap-4 lg:gap-10 md:ml-0 lg:ml-14 md:w-[80%] lg:w-[50%]'>
+                    <li className='flex items-center md:gap-2 lg:gap-2 cursor-pointer hover:text-gray-700 md:w-25 lg:w-40'>
                         <img src={assets.MenuIcon} alt="" />
-                        <p>All Category</p>
+                        <p className='md:text-[12px] lg:text-[16px]'>All Category</p>
                     </li>
-                    <li className='hover:text-gray-800 cursor-pointer'>Hot Offers</li>
-                    <li className='hover:text-gray-800 cursor-pointer'>Gift boxes</li>
-                    <li className='hover:text-gray-800 cursor-pointer'>Projects</li>
-                    <li className='hover:text-gray-800 cursor-pointer'>Menu item</li>
-                    <li className='hover:text-gray-800 flex items-center gap-1 cursor-pointer'>
+                    <li className='hover:text-gray-800 cursor-pointer md:text-[12px] lg:text-[16px] md:w-15 lg:w-30'>Hot Offers</li>
+                    <li className='hover:text-gray-800 cursor-pointer md:text-[12px] lg:text-[16px] md:w-15 lg:w-30'>Gift boxes</li>
+                    <li className='hover:text-gray-800 cursor-pointer md:text-[12px] lg:text-[16px] md:w-15 lg:w-30'>Projects</li>
+                    <li className='hover:text-gray-800 cursor-pointer md:text-[12px] lg:text-[16px] md:w-15 lg:w-30'>Menu item</li>
+                    <li className='hover:text-gray-800 flex items-center gap-1 cursor-pointer md:text-[12px] lg:text-[16px] md:w-20 lg:w-30'>
                         <p>Help</p>
                         <img src={assets.arrowIcon} alt="" />
                     </li>
                 </ul>
 
-                <div className='flex items-center gap-7 mr-24'>
-                    <button className='flex items-center gap-1 cursor-pointer hover:text-gray-800'>
-                        <p>English, USD</p>
+                <div className='flex items-center md:gap-2 lg:gap-7 md:mr-4 lg:mr-24'>
+                    <button className='flex items-center gap-1 cursor-pointer hover:text-gray-800 md:w-20 lg:w-30'>
+                        <p className='md:text-[10px] lg:text-[16px]'>English, USD</p>
                         <img src={assets.arrowIcon} alt="" />
                     </button>
-                    <button className='flex items-center gap-1 cursor-pointer hover:text-gray-800'>
-                        <p>Ship To</p>
-                        <img className='w-5' src={assets.AeFlag} alt="" />
+                    <button className='flex items-center gap-1 cursor-pointer hover:text-gray-800 md:w-20 lg:w-30'>
+                        <p className='md:text-[11px] lg:text-[16px]'>Ship To</p>
+                        <img className='md:w-4 lg:w-5' src={assets.AeFlag} alt="" />
                         <img src={assets.arrowIcon} alt="" />
                     </button>
                 </div>
