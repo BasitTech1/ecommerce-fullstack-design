@@ -30,10 +30,10 @@ const ProductSiderBar = () => {
   }
 
   return (
-    <div className='hidden sm:flex ml-2 sm:flex items-start sm:ml-14 gap-2 justify-start sm:flex-col w-[10%] z-10'>
-      <hr className='text-gray-300 sm:w-35 sm:h-0.5' />
+    <div className='hidden sm:flex ml-2 sm:flex items-start md:ml-10 lg:ml-14 gap-2 justify-start sm:flex-col w-[10%] z-10'>
+      <hr className='text-gray-300 md:w-24 lg:w-35 sm:h-0.5' />
       <div>
-        <h2 onClick={expandCategory} className='flex items-center gap-3 sm:gap-12 text-[12px] sm:text-[18px] font-medium text-gray-900'>
+        <h2 onClick={expandCategory} className='flex items-center gap-3 md:gap-4 lg:gap-12 text-[12px] md:text-[15px] lg:text-[18px] font-medium text-gray-900'>
           Category
           <img className={`cursor-pointer ${showCategory ? 'rotate-180 transition-all' : ''} w-2 sm:w-3`} src={assets.arrowIcon} alt="" />
         </h2>
@@ -48,9 +48,9 @@ const ProductSiderBar = () => {
         </div>
       </div>
 
-      <hr className='text-gray-300 sm:w-35 sm:h-0.5' />
+      <hr className='text-gray-300 md:w-24 lg:w-35 sm:h-0.5' />
       <div className='ml-[-25px] sm:ml-0'>
-        <h2 onClick={expandBrand} className='flex items-center gap-1 sm:gap-17 text-[12px] sm:text-[18px] font-medium text-gray-900 cursor-pointer'>
+        <h2 onClick={expandBrand} className='flex items-center gap-1 md:gap-8 lg:gap-17 text-[12px] md:text-[15px] lg:text-[18px] font-medium text-gray-900 cursor-pointer'>
           Brands
           <img className={`${showBrand ? 'rotate-180 transition-all' : ''}`} src={assets.arrowIcon} alt="" />
         </h2>
@@ -81,11 +81,11 @@ const ProductSiderBar = () => {
         </div>
       </div>
 
-      <hr className='text-gray-300 sm:w-35 sm:h-0.5' />
+      <hr className='text-gray-300 md:w-24 lg:w-35 sm:h-0.5' />
       <div className='ml-[-38px] sm:ml-0'>
-        <h2 onClick={expandFeature} className='flex items-center gap-1 sm:gap-14 text-[12px] sm:text-[18px] font-medium text-gray-900 cursor-pointer'>
+        <h2 onClick={expandFeature} className='flex items-center gap-1 md:gap-5 lg:gap-14 text-[12px] md:text-[15px] lg:text-[18px] font-medium text-gray-900 cursor-pointer'>
           Features
-          <img className={`transition-all duration-300 overflow-hidden ${showFeature ? 'rotate-180' : ''}`} src={assets.arrowIcon} alt="" />
+          <img className={`transition-all duration-300 ${showFeature ? 'rotate-180' : ''} w-2 sm:w-3`} src={assets.arrowIcon} alt="" />
         </h2>
         <div className={`transition-all duration-300 overflow-hidden ${showFeature ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <ul className='flex flex-col'>
@@ -114,9 +114,9 @@ const ProductSiderBar = () => {
         </div>
       </div>
 
-      <hr className='text-gray-300 sm:w-35 sm:h-0.5' />
-      <div className='ml-[-28px] sm:ml-0'>
-        <h2 onClick={expandPrice} className='flex items-center gap-1 sm:gap-21 text-[12px] sm:text-[18px] font-medium text-gray-900 cursor-pointer'>
+      <hr className='md:hidden lg:flex text-gray-300 md:w-24 lg:w-35 sm:h-0.5' />
+      <div className='md:hidden lg:flex lg:flex-col ml-[-28px] sm:ml-0'>
+        <h2 onClick={expandPrice} className='flex items-center gap-1 md:gap-11 lg:gap-21 text-[12px] md:text-[15px] lg:text-[18px] font-medium text-gray-900 cursor-pointer'>
           Price
           <img className={`${showPrice ? 'rotate-180' : ''} w-2 sm:w-3`} src={assets.arrowIcon} alt="" />
         </h2>
@@ -133,9 +133,9 @@ const ProductSiderBar = () => {
         </form>
       </div>
 
-      <hr className='text-gray-300 sm:w-35 sm:h-0.5' />
+      <hr className='text-gray-300 md:w-24 lg:w-35 sm:h-0.5' />
       <div>
-        <h2 onClick={expanCondition} className='flex items-center sm:gap-12 gap-1 text-[12px] sm:text-[18px] font-medium text-gray-900 cursor-pointer'>
+        <h2 onClick={expanCondition} className='flex items-center md:gap-3 lg:gap-12 gap-1 text-[12px] md:text-[15px] lg:text-[18px] font-medium text-gray-900 cursor-pointer'>
           Condition
           <img className={`${showCondition ? 'rotate-180' : ''}`} src={assets.arrowIcon} alt="" />
         </h2>

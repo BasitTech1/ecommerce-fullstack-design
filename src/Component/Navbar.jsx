@@ -103,7 +103,7 @@ const Navbar = () => {
                 <ul className='flex items-center justify-center md:gap-4 lg:gap-10 md:ml-0 lg:ml-14 md:w-[80%] lg:w-[50%]'>
                     <li className='flex items-center md:gap-2 lg:gap-2 cursor-pointer hover:text-gray-700 md:w-25 lg:w-40'>
                         <img src={assets.MenuIcon} alt="" />
-                        <p className='md:text-[12px] lg:text-[16px]'>All Category</p>
+                        <p className='md:text-[12px] lg:text-[15px]'>All Category</p>
                     </li>
                     <li className='hover:text-gray-800 cursor-pointer md:text-[12px] lg:text-[16px] md:w-15 lg:w-30'>Hot Offers</li>
                     <li className='hover:text-gray-800 cursor-pointer md:text-[12px] lg:text-[16px] md:w-15 lg:w-30'>Gift boxes</li>

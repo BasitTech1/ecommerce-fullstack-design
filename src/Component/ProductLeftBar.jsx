@@ -44,20 +44,20 @@ const ProductLeftBar = () => {
     }, [categoryId, products])
 
     return (
-        <div className='flex flex-col w-[90%] sm:w-[78%] items-center justify-between ml-4 sm:ml-0 mt-2 sm:mt-[-30px]'>
+        <div className='flex flex-col w-[92%] md:w-[70%] lg:w-[78%] items-center justify-between ml-4 sm:ml-0 mt-2 sm:mt-[-30px]'>
             <div className='flex items-center justify-between w-[100%] bg-white p-3 border border-gray-300 rounded'>
-                <p className='text-[13px] sm:text-sm text-gray-600'>{filterProducts.length} items in<span className='text-[12px] sm:text-[15px] text-gray-800 font-medium'> {getCategoryDisplayName(categoryId)}</span></p>
+                <p className='text-[10px] sm:text-sm text-gray-600'>{filterProducts.length} items in<span className='text-[10px] sm:text-[15px] text-gray-800 font-medium'> {getCategoryDisplayName(categoryId)}</span></p>
                 <div className='flex items-center justify-between gap-2 sm:gap-6'>
                     <div className='flex items-center gap-1 cursor-pointer'>
-                        <input type="checkbox" />
-                        <p className='text-gray-600 font-medium sm:text-[16px] text-[11px]'>Verified only</p>
+                        <input type="checkbox"/>
+                        <p className='text-gray-600 font-medium sm:text-[16px] text-[8px]'>Verified only</p>
                     </div>
-                    <select className='border p-0.5 sm:p-1 border-gray-400 text-[10px] sm:text-sm font-medium text-gray-600 cursor-pointer'>
+                    <select className='border p-0.5 sm:p-1 border-gray-400 text-[8px] sm:text-sm font-medium text-gray-600 cursor-pointer'>
                         <option>Featured</option>
                     </select>
                     <div className='flex items-center gap-1 sm:gap-2 border border-gray-300 p-1 cursor-pointer'>
-                        <img className='w-3 sm:w-5' src={assets.GridIcon1} alt="" />
-                        <img className='w-3 sm:w-5.5' src={assets.GridIcon2} alt="" />
+                        <img className='w-2 sm:w-5' src={assets.GridIcon1} alt="" />
+                        <img className='w-2 sm:w-5.5' src={assets.GridIcon2} alt="" />
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@ const RelatedProducts = ({category}) => {
       <div>
         <h2 className='text-[12px] sm:text-[18px] font-medium'>RELATED PRODUCTS</h2>
       </div>
-      <div className='grid gap-10 grid-cols-2 sm:flex items-center sm:justify-between w-80 mt-3 sm:mt-5'>
+      <div className='grid md:gap-15 lg:gap-10 grid-cols-2 sm:flex items-center sm:justify-between w-80 lg:mt-3 sm:mt-5 md:ml-15'>
         {
             related.map((item, index) =>(
                 <ProductIntro

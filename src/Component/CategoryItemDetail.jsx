@@ -8,8 +8,8 @@ const CategoryItemDetail = ({ id, image, name, price, description, order, status
     return (
         <div className='w-full'>
             <div className='flex items-start justify-between bg-white mb-4 mt-1 sm:mt-4 rounded border border-gray-300 p-2 sm:p-4 gap-2 sm:gap-4 w-full'>
-                <div className='flex items-center justify-between w-[80%] sm:w-[20%]'>
-                    <img className='w-[100%] sm:w-40 hover:scale-110 transition-all' src={image} alt="" />
+                <div className='flex items-center justify-between w-[80%] lg:w-[20%]'>
+                    <img className='w-[100%] md:w-50 lg:w-40 hover:scale-110 transition-all' src={image} alt="" />
                 </div>
                 <div className='flex flex-col gap-2'>
                     <p className='text-[16px] font-medium text-gray-600'>{name}</p>

@@ -50,19 +50,19 @@ const ProductDetails = () => {
 
     return (
         <div className='w-full'>
-            <div className='flex items-center ml-5 mb-0 sm:ml-14 sm:mb-4 gap-2 text-[12px] sm:text-[13px] font-medium text-gray-400'>
+            <div className='flex items-center ml-5 mb-0 md:ml-11 lg:ml-14 sm:mb-4 gap-2 text-[12px] sm:text-[13px] font-medium text-gray-400'>
                 <Link className='cursor-pointer' to={'/'}>Home</Link>
                 <img className='rotate-270 w-2' src={assets.arrowIcon} alt="" />
                 <Link className='cursor-pointer' to={`/category/${productData?.category || 'products'}`}>{categoryName}</Link>
             </div>
 
             {productData ? (
-                <div className='flex flex-col sm:flex sm:flex-row items-start gap-4 p-3 sm:gap-16 sm:p-6 w-full'>
-                    <div className='flex flex-col items-center sm:flex sm:flex-row sm:items-start justify-center gap-8 sm:gap-20 p-3 sm:p-6 w-full bg-white border border-gray-300'>
+                <div className='flex flex-col sm:flex sm:flex-row items-start gap-4 p-3 lg:gap-16 md:p-4 lg:p-6 w-full'>
+                    <div className='flex flex-col items-center sm:flex sm:flex-row sm:items-start justify-center gap-8 lg:gap-20 p-3 md:p-4 lg:p-6 w-full bg-white border border-gray-300'>
                         {/* product image  */}
-                        <div className='ml-3 sm:ml-7 flex flex-col gap-3'>
+                        <div className='ml-3 lg:ml-7 flex flex-col gap-3'>
                             <div className='w-full border border-gray-300'>
-                                <img className='w-100 h-90 object-center object-cover p-2 sm:p-4' src={image} alt="" />
+                                <img className='w-100 lg:h-90 object-center object-cover p-2 lg:p-4' src={image} alt="" />
                             </div>
                             <div>
                                 {productData.image && productData.image.length > 0 && (
@@ -73,7 +73,7 @@ const ProductDetails = () => {
                                                 key={index}
                                                 src={img}
                                                 alt={`${productData.name} ${index + 1}`}
-                                                className="w-20 object-cover object-center cursor-pointer border p-2 border-gray-300"
+                                                className="md:w-18 lg:w-20 object-cover object-center cursor-pointer border p-2 border-gray-300"
                                             />
                                         ))}
                                     </div>
@@ -83,7 +83,7 @@ const ProductDetails = () => {
 
                         {/* product info  */}
                         <div className='flex flex-col gap-2'>
-                            <h1 className='text-2xl font-semibold text-gray-800'>{productData.name}</h1>
+                            <h1 className='md:text-[20px] lg:text-2xl font-semibold text-gray-800'>{productData.name}</h1>
                             <div className='flex items-center gap-1'>
                                 <RiStarFill className='text-amber-500 w-5' />
                                 <RiStarFill className='text-amber-500 w-5' />
@@ -96,34 +96,34 @@ const ProductDetails = () => {
                                     <span className='text-[14px] font-medium text-gray-500'>{productData.order}</span>
                                 </p>
                             </div>
-                            <div className='flex flex-col gap-4'>
+                            <div className='flex flex-col md:gap-10 lg:gap-15'>
                                 <p className='bg-red-200 w-25 font-medium text-red-600 p-1 text-4xl'>{currency}{productData.price}</p>
                                 <div className='flex flex-col gap-3'>
-                                    <div className='flex gap-34 border-b-2 border-gray-300'>
+                                    <div className='flex md:gap-15 lg:gap-34 border-b-2 border-gray-300'>
                                         <p className='text-gray-500'>Price:</p>
                                         <p className='text-gray-500 font-medium'>Negotiable</p>
                                     </div>
                                     <div className='flex flex-col gap-2'>
-                                        <div className='flex gap-35'>
+                                        <div className='flex md:gap-15 lg:gap-30'>
                                             <p className='text-gray-500'>Type:</p>
                                             <p className='text-gray-500 font-medium'>Classic shoes</p>
                                         </div>
-                                        <div className='flex gap-29'>
+                                        <div className='flex md:gap-5 lg:gap-29'>
                                             <p className='text-gray-500'>Material:</p>
                                             <p className='text-gray-500 font-medium'>Plastic material</p>
                                         </div>
                                     </div>
-                                    <div className='flex gap-25 border-b-2 border-gray-300'>
+                                    <div className='flex md:gap-5 lg:gap-25 border-b-2 border-gray-300'>
                                         <p className='text-gray-500'>Protection:</p>
                                         <p className='text-gray-500 font-medium'>Refund Policy</p>
                                     </div>
                                     <div className='flex flex-col gap-2'>
-                                        <div className='flex gap-32'>
+                                        <div className='flex md:gap-5 lg:gap-25'>
                                             <p className='text-gray-500'>Design:</p>
                                             <p className='text-gray-500 font-medium'>Modern</p>
                                         </div>
-                                        <div className='flex gap-28'>
-                                            <p className='text-gray-500'>Warrenty</p>
+                                        <div className='md:gap-5 lg:gap-15'>
+                                            <p className='text-gray-500'>Warrenty:</p>
                                             <p className='text-gray-500 font-medium'>2 Year full</p>
                                         </div>
                                     </div>
@@ -133,8 +133,8 @@ const ProductDetails = () => {
 
                         {/* seller profile  */}
                         <div className='flex flex-col gap-2 border p-3 w-80 sm:w-60'>
-                            <p className='text-xl leading-5 font-medium'>Supplier <br /> Guanjoi Trading LLC</p>
-                            <div className='flex flex-col gap-3'>
+                            <p className='md:text-[14px] lg:text-xl md:leading-3 lg:leading-5 font-medium'>Supplier <br /> Guanjoi Trading LLC</p>
+                            <div className='flex flex-col md:gap-1 lg:gap-3'>
                                 <div className='flex items-center gap-3'>
                                     <img className='w-5' src={assets.GbFlag} alt="" />
                                     <p className='text-[17px] font-medium text-gray-400'>Great Britain</p>
@@ -149,8 +149,8 @@ const ProductDetails = () => {
                                 </div>
                             </div>
                             <div className='flex flex-col gap-4'>
-                                <button className='bg-blue-500 p-2 text-white text-[16px] cursor-pointer'>Send inquiry</button>
-                                <button className='border p-2 text-blue-400 cursor-pointer text-[16px]'>Seller's Profile</button>
+                                <button className='bg-blue-500 p-2 text-white md:text-[13px] lg:text-[16px] cursor-pointer'>Send inquiry</button>
+                                <button className='border p-2 text-blue-400 cursor-pointer md:text-[13px] lg:text-[16px]'>Seller's Profile</button>
                             </div>
                             <div>
                                 <div className=''>
