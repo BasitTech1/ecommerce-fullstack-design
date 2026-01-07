@@ -24,7 +24,6 @@ import AppStoreIcon from './App_store_icon.png'
 import HeartIcon from './Heart_Icon.png'
 import InstaIcon from './Insta_icon.png'
 import LinkedinIcon from './link_icon.png'
-import MarketIcon from './Market_icon.png'
 import MessageIcon from './Message_icon.png'
 import MsgIcon from './Msg_icon.png'
 import SearchIcon from './Search_Icon.png'
@@ -106,7 +105,6 @@ export const assets = {
     HeartIcon,
     InstaIcon,
     LinkedinIcon,
-    MarketIcon,
     MessageIcon,
     MsgIcon,
     SearchIcon,
