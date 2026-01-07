@@ -10,6 +10,7 @@ const ShopContextProvider = (props) => {
     const delivery_fee = 10
     const [cartItems, setCartItems] = useState({})
     const [searchItem, setSearchItem] = useState('')
+    const [gridView, setGridView] = useState(false)
 
     const addToCart = async (itemId, size) => {
         if (!size) {
@@ -77,7 +78,8 @@ const ShopContextProvider = (props) => {
         products, currency, delivery_fee,
         cartItems, addToCart, getCartCount,
         updateQuantity, getCartAmount,
-        searchItem, setSearchItem
+        searchItem, setSearchItem, gridView,
+        setGridView
     }
 
     return (
