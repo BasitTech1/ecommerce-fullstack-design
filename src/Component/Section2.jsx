@@ -7,9 +7,17 @@ import SectionProductInfo from './SectionProductInfo'
 
 
 const Section2 = () => {
-  const { products } = useContext(ShopContext)
+  const { products, searchItem } = useContext(ShopContext)
   const [displayProduct, setDisplayProduct] = useState([])
   const [displayProduct2, setDisplayProduct2] = useState([])
+
+  const filteredDealsProducts1 = displayProduct.filter(products =>
+    products.name.toLowerCase().includes(searchItem.toLowerCase())
+  )
+
+  const filteredDealsProducts2 = displayProduct2.filter(products =>
+    products.name.toLowerCase().includes(searchItem.toLowerCase())
+  )
 
 
   useEffect(() => {
@@ -36,7 +44,7 @@ const Section2 = () => {
         {/* Rendering Products  */}
         <div className='grid grid-cols-2 gap-3 sm:grid sm:grid-cols-4 sm:gap-6 w-[100%]'>
           {
-            displayProduct.map((item, index) => (
+            filteredDealsProducts1.map((item, index) => (
               <SectionProductInfo
                 key={index}
                 id={item.id}
@@ -60,7 +68,7 @@ const Section2 = () => {
 
         <div className='grid grid-cols-2 gap-3 sm:grid sm:grid-cols-4 sm:gap-6 w-[100%]'>
           {
-            displayProduct2.map((item, index) => (
+            filteredDealsProducts2.map((item, index) => (
               <SectionProductInfo
                 key={index}
                 id={item.id}

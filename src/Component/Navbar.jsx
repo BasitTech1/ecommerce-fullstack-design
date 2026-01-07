@@ -6,7 +6,7 @@ import { RiCloseCircleLine, RiHeadphoneLine, RiHeartLine, RiShieldCrossFill } fr
 
 const Navbar = () => {
 
-    const { getCartCount } = useContext(ShopContext)
+    const { getCartCount, searchItem, setSearchItem } = useContext(ShopContext)
     const [openMenu, setOpenMenu] = useState(false)
 
     const menuToggle =()=>{
@@ -69,7 +69,7 @@ const Navbar = () => {
 
                 <div className='hidden lg:flex md:flex '>
                     <div className='flex md:w-70 lg:w-130 items-center border-2 lg:px-1 md:p-0 border-[rgba(18,127,255,1)]'>
-                        <input className='md:w-40 md:p-1 lg:p-0 lg:w-100' type="search" placeholder='Search' />
+                        <input value={searchItem} onChange={(e) => setSearchItem(e.target.value)} className='md:w-40 md:p-1 lg:p-0 lg:w-100 outline-none' type="search" placeholder='Search' />
                         <div className='flex items-center justify-center sm:w-50 gap-3 border-l-2 border-[rgba(18,127,255,1)]'>
                             <p className='flex items-center md:gap-1 md:text-[14px] lg:text-[16px] lg:gap-2 cursor-pointer'>All categories
                                 <img src={assets.arrowIcon} alt="" />

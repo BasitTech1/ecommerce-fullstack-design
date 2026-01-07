@@ -9,12 +9,16 @@ import 'swiper/css';
 
 const Section1 = () => {
 
-    const { products } = useContext(ShopContext)
+    const { products, searchItem } = useContext(ShopContext)
     const [dealsProducts, setDealsProducts] = useState([])
 
     useEffect(() => {
         setDealsProducts(products.slice(4, 9))
     }, [])
+
+    const filteredDealsProducts = dealsProducts.filter(products =>
+        products.name.toLowerCase().includes(searchItem.toLowerCase())
+    )
 
     return (
         <div className='mt-2 px-5 md:mt-4 lg:mt-10 w-full md:px-10 lg:px-18'>
@@ -42,8 +46,8 @@ const Section1 = () => {
                             delay: 3000,
                             disableOnInteraction: false
                         }}
-                        className='w-full px-4'            
-                        >
+                        className='w-full px-4'
+                    >
                         {
                             dealsProducts.map((item, index) => (
                                 <SwiperSlide key={index} className='w-full h-[50]'>
@@ -56,7 +60,7 @@ const Section1 = () => {
 
                 <div className='hidden sm:flex sm:items-center md:justify-end lg:justify-center gap-0 ml-0 lg:ml-0 md:ml-[-20px] md:gap-12 lg:gap-18 cursor-pointer w-full h-full'>
                     {
-                        dealsProducts.map((item, index) => (
+                        filteredDealsProducts.map((item, index) => (
                             <ProductIntro key={index} id={item.id} image={item.image} name={item.name} price={item.price} />
                         ))
                     }
