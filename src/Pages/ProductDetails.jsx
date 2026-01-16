@@ -58,10 +58,10 @@ const ProductDetails = () => {
 
             {productData ? (
                 <div className='flex flex-col sm:flex sm:flex-row items-start gap-4 p-3 lg:gap-16 md:p-4 lg:p-6 w-full'>
-                    <div className='flex flex-col items-center sm:flex sm:flex-row sm:items-start justify-center gap-8 lg:gap-20 p-3 md:p-4 lg:p-6 w-full bg-white border border-gray-300'>
+                    <div className='flex flex-col items-center sm:flex sm:flex-row sm:items-start justify-center gap-8 lg:gap-6 p-3 md:p-4 lg:p-6 w-full bg-white border border-gray-300'>
                         {/* product image  */}
-                        <div className='ml-3 lg:ml-7 flex flex-col gap-3'>
-                            <div className='w-full border border-gray-300'>
+                        <div className='w-full sm:w-[30%] ml-3 lg:ml-0 flex flex-col gap-3'>
+                            <div className='w-[80%] border border-gray-300'>
                                 <img className='w-100 lg:h-90 object-center object-cover p-2 lg:p-4' src={image} alt="" />
                             </div>
                             <div>
@@ -73,7 +73,7 @@ const ProductDetails = () => {
                                                 key={index}
                                                 src={img}
                                                 alt={`${productData.name} ${index + 1}`}
-                                                className="md:w-18 lg:w-20 object-cover object-center cursor-pointer border p-2 border-gray-300"
+                                                className="w-16 md:w-18 lg:w-20 object-cover object-center cursor-pointer border p-2 border-gray-300"
                                             />
                                         ))}
                                     </div>
@@ -82,7 +82,7 @@ const ProductDetails = () => {
                         </div>
 
                         {/* product info  */}
-                        <div className='flex flex-col gap-2'>
+                        <div className='flex flex-col gap-2 w-full sm:w-[40%]'>
                             <h1 className='md:text-[20px] lg:text-2xl font-semibold text-gray-800'>{productData.name}</h1>
                             <div className='flex items-center gap-1'>
                                 <RiStarFill className='text-amber-500 w-5' />
@@ -99,30 +99,30 @@ const ProductDetails = () => {
                             <div className='flex flex-col md:gap-10 lg:gap-15'>
                                 <p className='bg-red-200 w-25 font-medium text-red-600 p-1 text-4xl'>{currency}{productData.price}</p>
                                 <div className='flex flex-col gap-3'>
-                                    <div className='flex md:gap-15 lg:gap-34 border-b-2 border-gray-300'>
+                                    <div className='flex md:gap-15 lg:gap-33 border-b-2 border-gray-300'>
                                         <p className='text-gray-500'>Price:</p>
                                         <p className='text-gray-500 font-medium'>Negotiable</p>
                                     </div>
                                     <div className='flex flex-col gap-2'>
-                                        <div className='flex md:gap-15 lg:gap-30'>
+                                        <div className='flex md:gap-15 lg:gap-33'>
                                             <p className='text-gray-500'>Type:</p>
                                             <p className='text-gray-500 font-medium'>Classic shoes</p>
                                         </div>
-                                        <div className='flex md:gap-5 lg:gap-29'>
+                                        <div className='flex md:gap-5 lg:gap-27'>
                                             <p className='text-gray-500'>Material:</p>
                                             <p className='text-gray-500 font-medium'>Plastic material</p>
                                         </div>
                                     </div>
-                                    <div className='flex md:gap-5 lg:gap-25 border-b-2 border-gray-300'>
+                                    <div className='flex md:gap-5 lg:gap-23.5 border-b-2 border-gray-300'>
                                         <p className='text-gray-500'>Protection:</p>
                                         <p className='text-gray-500 font-medium'>Refund Policy</p>
                                     </div>
                                     <div className='flex flex-col gap-2'>
-                                        <div className='flex md:gap-5 lg:gap-25'>
+                                        <div className='flex md:gap-5 lg:gap-30'>
                                             <p className='text-gray-500'>Design:</p>
                                             <p className='text-gray-500 font-medium'>Modern</p>
                                         </div>
-                                        <div className='md:gap-5 lg:gap-15'>
+                                        <div className='flex md:gap-5 lg:gap-25'>
                                             <p className='text-gray-500'>Warrenty:</p>
                                             <p className='text-gray-500 font-medium'>2 Year full</p>
                                         </div>

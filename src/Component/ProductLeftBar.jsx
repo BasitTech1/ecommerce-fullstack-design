@@ -8,12 +8,25 @@ import { useParams } from 'react-router-dom'
 
 const ProductLeftBar = () => {
 
-    const { products, gridView,setGridView } = useContext(ShopContext)
+    const { products, gridView, setGridView } = useContext(ShopContext)
     const [filterProducts, setFilterProducts] = useState([])
+    const [itemPerPage, setItemPerPage] = useState(5)
+    const [currentPage, setCurrentPage] = useState(1)
 
     const toggleView = () => {
         setGridView(!gridView)
         console.log(toggleView)
+    }
+
+    const totalPages = Math.ceil(filterProducts.length / itemPerPage)
+    const startIndex = (currentPage - 1) * itemPerPage
+    const endIndex = startIndex + itemPerPage
+    const currentProducts = filterProducts.slice(startIndex, endIndex)
+
+    const handlePageChange = (page) => {
+        if (page >= 1 && page <= totalPages) {
+            setCurrentPage(page)
+        }
     }
 
     const { categoryId } = useParams()
@@ -90,15 +103,34 @@ const ProductLeftBar = () => {
                 }
             </div>
             <div className='flex items-center gap-4 mt-2 lg:ml-235'>
-                <select className='bg-white p-2 cursor-pointer'>
-                    <option>Show 10</option>
+                <select
+                    value={itemPerPage}
+                    onChange={(e) => {
+                        setItemPerPage(Number(e.target.value))
+                        setCurrentPage(1)
+                    }}
+                    className='bg-white p-2 cursor-pointer outline-none'>
+                    <option value={5}>Show 5</option>
+                    <option value={10}>Show 10</option>
+                    <option value={15}>Show 15</option>
+                    <option value={20}>Show 20</option>
                 </select>
                 <ul className='flex items-center gap-4 bg-white p-2 cursor-pointer'>
-                    <img className='rotate-90' src={assets.arrowIcon} alt="" />
-                    <li className='text-gray-500 font-medium'>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <img className='rotate-270' src={assets.arrowIcon} alt="" />
+                    <img
+                        onClick={() => handlePageChange(currentPage - 1)}
+                        className='rotate-90' src={assets.arrowIcon} alt="" />
+                    {[...Array(totalPages)].map((_, i) => (
+                        <li
+                            key={i}
+                            onClick={() => handlePageChange(i + 1)}
+                            className={`${currentPage === i + 1 ? 'text-gray-500 font-medium' : ''}`}
+                        >
+                            {i + 1}
+                        </li>
+                    ))}
+                    <img
+                        onClick={() => handlePageChange(currentPage + 1)}
+                        className='rotate-270' src={assets.arrowIcon} alt="" />
                 </ul>
             </div>
         </div>

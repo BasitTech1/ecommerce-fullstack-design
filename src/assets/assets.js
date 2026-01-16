@@ -74,6 +74,8 @@ import Product28 from './Product28.png'
 import Product28_1 from './Product28_1.png'
 import Product28_2 from './Product28_2.png'
 import Product28_3 from './Product28_3.png'
+import stripeIcon from './stripe_logo.png'
+import easypasiaIcon from './easypasia_icon.png'
 
 // ---------------------banner------------------
 import Banner1 from './banner1.png'
@@ -126,6 +128,8 @@ export const assets = {
     Home_icon,
     Order_icon,
     About_icon,
+    stripeIcon,
+    easypasiaIcon,
 
     // banner 
     Banner1,
@@ -392,7 +396,7 @@ export const products = [
         id: "p28",
         name: "Mens Long Sleeve T-shirt Cotton Base Layer Slim Muscle",
         price: 9.99,
-        image: [Product28, Product28_1,Product28_2,Product28_3],
+        image: [Product28, Product28_1, Product28_2, Product28_3],
         category: "clothes",
         description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
         order: 154,

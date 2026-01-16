@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { assets } from '../assets/assets'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
@@ -49,12 +50,12 @@ const Cart = () => {
                         })
                     }
                 </div>
-                <div className={`flex flex-col gap-1 bg-white w-[90%] md:w-[28%] lg:w-[22%] sm:mr-2 mt-[-20px] sm:mt-0 p-3 sm:p-2 sm:mb-2 border border-gray-300 sm:absolute sm:right-0 sm:top-0 ml-5 sm:ml-0`}>
-                    <div className='flex items-center gap-33 md:gap-20 lg:gap-36'>
+                <div className={`flex flex-col gap-1 bg-white w-[90%] md:w-[28%] lg:w-[23%] sm:mr-10 mt-[-20px] sm:mt-0 p-3 sm:p-2 sm:mb-2 border border-gray-300 sm:absolute sm:right-0 sm:top-0 ml-5 sm:ml-0`}>
+                    <div className='flex items-center gap-33 md:gap-20 lg:gap-35'>
                         <p className='font-medium text-gray-400'>Subtotal:</p>
                         <p className='font-medium text-gray-400'>{currency}{getCartAmount()}.00</p>
                     </div>
-                    <div className='flex items-center gap-25 md:gap-20 lg:gap-36 border-b-2 border-gray-300 pb-2'>
+                    <div className='flex items-center gap-25 md:gap-20 lg:gap-28 border-b-2 border-gray-300 pb-2'>
                         <p className='font-medium text-gray-400'>Shipping Fee:</p>
                         <p className='font-medium text-gray-400'>{currency} {delivery_fee}</p>
                     </div>
@@ -62,12 +63,12 @@ const Cart = () => {
                         <b>Total:</b>
                         <b>{currency}{getCartAmount() === 0 ? 0 : getCartAmount() + delivery_fee}.00</b>
                     </div>
-                    <button className='bg-blue-500 p-1 text-white font-medium cursor-pointer hover:bg-blue-400 transition-all'>CHEKCOUT</button>
+                    <Link to={'/place-order'} className='flex item-center justify-center bg-blue-500 p-1 text-white font-medium cursor-pointer hover:bg-blue-400 transition-all'>CHEKCOUT</Link>
                 </div>
             </div>
 
             <div className='flex flex-row items-center gap-2 ml-0 mb-0 mt-2 sm:gap-4  sm:w-full sm:mt-14 sm:mb-4 w-full p-4 sm:p-4'>
-                <div className='flex items-center gap-1 sm:gap-4'>
+                <div className='flex items-center gap-1 sm:gap-4 ml-0 sm:ml-8'>
                     <img className='w-8 p-2 sm:w-12 bg-gray-200 sm:p-4 rounded-full' src={assets.secure} alt="" />
                     <div>
                         <h2 className='text-[10px] md:text-[15px] lg:text-[18px] font-medium text-gray-500'>Secure payment</h2>

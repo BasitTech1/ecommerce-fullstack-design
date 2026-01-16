@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { assets } from '../assets/assets'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 import { RiCloseCircleLine, RiHeadphoneLine, RiHeartLine, RiShieldCrossFill } from '@remixicon/react'
 
@@ -8,8 +8,13 @@ const Navbar = () => {
 
     const { getCartCount, searchItem, setSearchItem } = useContext(ShopContext)
     const [openMenu, setOpenMenu] = useState(false)
+    const location = useLocation()
 
-    const menuToggle =()=>{
+
+    const hideSearchPages = ['/login', '/cart', '/place-order']
+    const shouldHideSearch = hideSearchPages.includes(location.pathname)
+
+    const menuToggle = () => {
         setOpenMenu(!openMenu)
     }
 
@@ -67,22 +72,27 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className='hidden lg:flex md:flex '>
-                    <div className='flex md:w-70 lg:w-130 items-center border-2 lg:px-1 md:p-0 border-[rgba(18,127,255,1)]'>
-                        <input value={searchItem} onChange={(e) => setSearchItem(e.target.value)} className='md:w-40 md:p-1 lg:p-0 lg:w-100 outline-none' type="search" placeholder='Search' />
-                        <div className='flex items-center justify-center sm:w-50 gap-3 border-l-2 border-[rgba(18,127,255,1)]'>
-                            <p className='flex items-center md:gap-1 md:text-[14px] lg:text-[16px] lg:gap-2 cursor-pointer'>All categories
-                                <img src={assets.arrowIcon} alt="" />
-                            </p>
+                {
+                    !shouldHideSearch && (
+
+                        <div className='hidden lg:flex md:flex '>
+                            <div className='flex md:w-70 lg:w-130 items-center border-2 lg:px-1 md:p-0 border-[rgba(18,127,255,1)]'>
+                                <input value={searchItem} onChange={(e) => setSearchItem(e.target.value)} className='md:w-40 md:p-1 lg:p-0 lg:w-100 outline-none' type="search" placeholder='Search' />
+                                <div className='flex items-center justify-center sm:w-50 gap-3 border-l-2 border-[rgba(18,127,255,1)]'>
+                                    <p className='flex items-center md:gap-1 md:text-[14px] lg:text-[16px] lg:gap-2 cursor-pointer'>All categories
+                                        <img src={assets.arrowIcon} alt="" />
+                                    </p>
+                                </div>
+                            </div>
+                            <button className='bg-[rgba(18,127,255,1)] text-white lg:py-1 lg:mr-[-76px] lg:px-3 md:px-1 cursor-pointer hover:bg-[#0666d4] md:text-[12px] lg:text-[16px]'>Search</button>
                         </div>
-                    </div>
-                    <button className='bg-[rgba(18,127,255,1)] text-white lg:py-1 lg:mr-[-76px] lg:px-3 md:px-1 cursor-pointer hover:bg-[#0666d4] md:text-[12px] lg:text-[16px]'>Search</button>
-                </div>
+                    )
+                }
                 <div className='gap-2 mr-0 md:w-44 lg:w-75 flex items-center md:gap-3 lg:gap-4 md:mr-4 lg:mr-8'>
-                    <button className='flex flex-col md:w-6 lg:w-8 sm:w-12 items-center justify-center gap-1 lg:gap-1.5 cursor-pointer'>
+                    <Link to={'/login'} className='flex flex-col md:w-6 lg:w-8 sm:w-12 items-center justify-center gap-1 lg:gap-1.5 cursor-pointer'>
                         <img className='w-6' src={assets.ProfileIcon} alt="" />
                         <p className='text-[10px] font-medium text-gray-500'>Profile</p>
-                    </button>
+                    </Link>
                     <button className='hidden sm:flex flex-col w-12 items-center justify-center gap-1 cursor-pointer'>
                         <img className='w-6' src={assets.MessageIcon} alt="" />
                         <p className='text-[10px] font-medium text-gray-500'>Message</p>
